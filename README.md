@@ -2,6 +2,7 @@
 ![snip1](https://user-images.githubusercontent.com/62429166/118778100-647e9a80-b8a7-11eb-9456-4a0426746ae2.PNG)
 
 <h2>Video demo of the website</h2>
+https://user-images.githubusercontent.com/62429166/118790115-18395780-b8b3-11eb-8ee9-77ac221cdda1.mp4
 
 <h2>About</h2>
 Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
