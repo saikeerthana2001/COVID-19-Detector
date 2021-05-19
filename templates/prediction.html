@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <style type="text/css">
+        a{
+            color: #000080!important;
+            text-decoration: none!important;
+        }
+        button{
+            width: 30%!important;
+            height: 90%!important;
+            background: #87CEEB!important;
+            color: #000080!important;
+
+        }
+    </style>
+    </head>
+    <body>
+        <nav style="background:#87CEEB">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo" style="font-family: 'Open Sans', sans-serif;">COVID-19 Detector</a>
+    </div>
+  </nav>
+        <center>
+            <div class='cont'>
+                
+            
+            {% if data[1] > 0.50 %}
+            <h2>Negative</h2>
+            <div style="max-width: 40%!important">Your Chest X-Ray has been examined and is tested <strong>negative</strong>. You might be having common cold/cough (if any) which can be cured by using regular medicines.<br><span style="text-align: center!important;">Stay Home, Stay Safe!!</span></div>
+            {%else%}
+            <h2>Positive</h2>
+            <div style="max-width: 40%!important">Your Chest X-Ray has been examined and is tested <strong>positive</strong>. There are chances that you are COVID-19 affected. However, it is suggested to get COVID-19 test done from a verified centre as the results obtained through this test are not totally reliable. <br><span style="text-align: center!important;">We hope that you will get well soon!!</span></div>
+            {%endif%}
+            <br><br><br>
+
+        </div>
+
+        </center>
+        
+    </body>
+</html>

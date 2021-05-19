@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COVID-19 Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <style type="text/css">
+        a{
+            color: #000080!important;
+        }
+        .footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+    </style>
+</head>
+
+
+<body>
+<nav style="background:#87CEEB">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo" style="font-family: 'Open Sans', sans-serif;">COVID-19 Detector</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#symptoms">Symptoms</a></li>
+        <li><a href="#precautions">Precautions</a></li>
+        <li><a href="#test"><strong>COVID-19 test!</strong></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="#symptoms">Symptoms</a></li>
+    <li><a href="#precautions">Precautions</a></li>
+    <li><a href="#test"><strong>COVID-19 test!</strong></a></li>
+  </ul><br><br>
+<div class="owl-carousel owl-theme">
+    <div class="item"><img src="static/images/page-2.png"></div>
+    <div class="item"><img src="static/images/page-3.png"></div>
+    <div class="item"><img src="static/images/page-4.png"></div>
+    <div class="item"><img src="static/images/page-5.png"></div>
+    <div class="item"><img src="static/images/page-6.png"></div>
+</div>
+<br><br>
+<div id="symptoms" style="text-align: center!important;background:#fcfcf0!important">
+    <br><h4 style="text-align: center!important;font-family: 'Open Sans', sans-serif;">SYMPTOMS</h4><br>
+    <p><strong>The following may appear 2-14 days after exposure:</strong>
+        <ul>
+            <li>- Fever</li>
+            <li>- Cough</li>
+            <li>- Shortness of breath</li>
+        </ul>
+    <strong>Seek medical advice if:</strong>
+<ul>
+    <li>- You develop worsening symptoms</li>
+    <li>- You have been in a close contact with a person known to have COVID-19</li>
+    <li>- You live in or have recently been in an area with ongoing spread of COVID-19</li>
+</ul></p>
+    <br>
+</div>
+<br><br>
+<div id="precautions" style="text-align: center!important;background:#b8e6f5!important">
+    <br><h4 style="text-align: center!important;font-family: 'Open Sans', sans-serif;">PRECAUTIONS</h4><br>
+    <p><strong>Prevent the spread of COVID-19 in 7 steps</strong>
+        <ul>
+            <li>- Wash your hands frequently</li>
+            <li>- Avoid touching your eyes, nose and mouth</li>
+            <li>- Cover your cough using the bend of your elbow or a tissue</li>
+            <li>- Avoid crowded places and close contact with anone who has fever of cough</li>
+            <li>- Stay home if you are not well</li>
+            <li>- If you have a fever, cough and difficulty in breathing, seek medical care early</li>
+            <li>- Get information from trusted sources</li>
+        </ul>
+</p>
+    <br>
+</div>
+<br><br>
+<div id="test" style="text-align: center!important;background:#fcfcf0!important">
+    <br><h4 style="text-align: center!important;font-family: 'Open Sans', sans-serif;">COVID-19 Test</h4><br>
+    <p><strong>Please upload your Chest X-Ray here</strong><br><br>
+        <form method="POST" action="{{url_for('home')}}" enctype="multipart/form-data" >
+            <input type="file" name='image' class='btn' style="background: #b8e6f5!important;color: #000080!important"><br><br><br>
+            <input type="submit" class='btn' style="background: #b8e6f5!important;color: #000080!important">
+        </form>
+  <!-- <input type="file" id="img" name="img" accept="image/*">--><br><br>
+</p>
+        
+    <br>
+</div>
+<br><br>
+<footer>
+    <div style="text-align: center!important;background:#b8e6f5!important">
+    <br>
+    <h6><strong>Stay Home, Stay Safe!!!</strong></h6>
+    <br>
+</div>
+    
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    autoplay: true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:2
+        }
+    }
+})</script>
+<script type="text/javascript">
+     document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+    
+</script>
+</body>
+</html>
